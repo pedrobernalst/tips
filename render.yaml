@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: taptap-tips
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Pon aquí la URL que te asigne Render (la que irá en los QR/NFC)
+      - key: BASE_URL
+        sync: false
